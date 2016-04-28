@@ -2,6 +2,7 @@ from datetime import date
 from PyQt5 import QtCore
 import re
 
+
 class TaskHtmlizer(object):
     def __init__(self):
         self.priority_colors = dict(
@@ -47,7 +48,7 @@ class TaskHtmlizer(object):
                 word = parts[1]
             else:
                 regexp = re.compile(r"jira.*?\/([A-Z]+-\d+)$")
-                id = regexp.search(word);
+                id = regexp.search(word)
 
                 if id is not None:
                     cleanWord = "JIRA: " + id.group(1)

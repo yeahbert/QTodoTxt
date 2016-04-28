@@ -2,6 +2,7 @@ from qtodotxt.lib import task_htmlizer, tasklib
 import unittest
 from PyQt5 import QtCore
 
+
 class TestHtmlizer(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -192,7 +193,7 @@ class TestHtmlizer(unittest.TestCase):
                          '+<a style="color:#64AAD0;" href="https://jirapage.com/JIRATASK-101">'
                          'JIRA: JIRATASK-101</a></font>')
 
-    def test_24(self):
+    def test_25(self):
         # Test replace Jira URL with description
         QtCore.QSettings().setValue("support_jira", 1)
         task = tasklib.Task('Test +TestDescription|https://jirapage.com/JIRATASK-101')
